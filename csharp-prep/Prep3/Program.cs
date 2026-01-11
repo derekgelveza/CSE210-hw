@@ -8,7 +8,6 @@ class Program
         int luckyNumber = randomGenerator.Next(1, 100);
         int userGuess;
 
-        //userGuess = int.Parse(Console.ReadLine());
 
         do
         {
