@@ -8,12 +8,15 @@ class Program
         int luckyNumber = randomGenerator.Next(1, 100);
         int userGuess;
 
+        int attempts = 0;
+
 
         do
         {
             Console.Write("What is your magic number? "); 
             string userResponse = Console.ReadLine();
             userGuess = int.Parse(userResponse);
+            attempts++;
 
             if (userGuess > luckyNumber)
             {
@@ -25,6 +28,7 @@ class Program
             }
         } while (userGuess != luckyNumber);
         Console.WriteLine("You guessed it!");
+        Console.WriteLine($"It took you {attempts} tries.");
 
 
 
