@@ -26,6 +26,8 @@ class Program
             double average = userNumbers.Average();
             int max = userNumbers.Max();
             int closestPositive = int.MaxValue;
+            userNumbers.Sort();
+            int totalSum = userNumbers.Sum();
 
             foreach (int i in userNumbers)
             {
@@ -34,10 +36,16 @@ class Program
                     closestPositive = i;
                 }
             }
-            
+
+            Console.WriteLine($"Your sum is: {totalSum}.");
             Console.WriteLine($"Your average is: {average}.");
             Console.WriteLine($"The largest number is: {max}.");
             Console.WriteLine($"The smalles positive number is: {closestPositive}.");
+            Console.WriteLine("The sorted list is:");
+             foreach (int i in userNumbers)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
