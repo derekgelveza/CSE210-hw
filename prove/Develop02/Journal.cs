@@ -144,4 +144,7 @@ public class Journal
 
     }
 
+    //https://www.geeksforgeeks.org/c-sharp/streamreader-and-streamwriter-in-c-sharp/
+    //https://learn.microsoft.com/en-us/dotnet/api/system.io.streamwriter?view=net-10.0
+
 }
