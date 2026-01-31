@@ -112,6 +112,92 @@ public class Journal
 
     }
 
+    public void editEntry()
+    {
+        if (entries.Count == 0)
+        {
+            Console.WriteLine("No entries to edit.");
+            return;
+        }
+
+        int _counter = 1;
+        Console.WriteLine("Which entry would you like to edit?");
+
+        foreach (JournalEntry entry in entries)
+        {
+            Console.WriteLine(_counter + ": " + entry._prompt + " - " + entry._response);
+            _counter++;
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("Enter the number of the entry to edit: ");
+        string numberString = Console.ReadLine();
+        int number = int.Parse(numberString);
+        int index = number - 1;
+
+        if (index < 0 || index >= entries.Count)
+        {
+            Console.WriteLine("invalid Entry number.");
+            return;
+        }
+
+        JournalEntry entryEdit = entries[index];
+        Console.WriteLine("Enter a new response: ");
+        entryEdit._response = Console.ReadLine();
+
+    }
+
+
+    public void deleteEntry()
+    {
+        if (entries.Count == 0)
+        {
+            Console.WriteLine("No entries to delete.");
+            return;
+        }
+
+        int _counter = 1;
+        Console.WriteLine("Which entry would you like to delete?");
+
+        foreach (JournalEntry entry in entries)
+        {
+            Console.WriteLine(_counter + ": " + entry._prompt + " - " + entry._response);
+            _counter++;
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("Enter the number of the entry you wish to delete");
+        string numberString = Console.ReadLine();
+        int number = int.Parse(numberString);
+        int index = number - 1;
+
+        if (index < 0 || index >= entries.Count)
+        {
+            Console.WriteLine("invalid Entry number.");
+            return;
+        }
+
+        Console.WriteLine("Are you sure you want to delete " + number + "? Enter [y] or [n]");
+        string confirmation = Console.ReadLine().ToLower();
+
+        if (confirmation == "y")
+        {
+            JournalEntry entryDelete = entries[index];
+            entries.Remove(entryDelete);
+            Console.WriteLine("Entry was deleted.");
+
+        } else if (confirmation == "n")
+        {
+            Console.WriteLine("Entry was not deleted.");
+        } else
+        {
+            Console.WriteLine("Invalid option");
+        }
+
+    }
+
+
+
     public void LoadFromFile()
     {
         Console.WriteLine("Which file would you like to load?");
