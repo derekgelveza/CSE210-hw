@@ -8,18 +8,18 @@ class Fraction
     //Constructors
     public Fraction()
     {
-        _top = 1;
-        _bottom = 1;
+        Top = 1;
+        Bottom = 1;
     }
-    public Fraction (int _top)
+    public Fraction (int number)
     {
-        this._top = _top;
-        this._bottom = 5;
+        Top = number;
+        Bottom = 1;
     }
-    public Fraction (int _top, int _bottom)
+    public Fraction (int top, int bottom)
     {
-        this._top = _top;
-        this._bottom = _bottom;
+        this.Top = top;
+        this.Bottom = bottom;
     }
 
 
@@ -51,12 +51,12 @@ class Fraction
 
     public string GetFraction()
     {
-        return  $"{_top} / {_bottom}"; 
+        return  $"{Top} / {Bottom}"; 
     }
 
     public double GetDecimalValue()
     {
-        return (double)_top / (double)_bottom;
+        return (double)Top / (double)Bottom;
     }
 
 
