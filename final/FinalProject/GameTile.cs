@@ -1,0 +1,124 @@
+using System;
+
+public class GameTile
+{
+    private string _terrain;
+
+    private GameTile _north;
+    private GameTile _south;
+    private GameTile _east;
+    private GameTile _west;
+
+    private Item _item;
+
+    private bool _isVisited;
+
+    public string Terrain {
+        get
+        {
+            return _terrain;
+        }
+        set
+        {
+            _terrain = value;
+        }
+    }
+
+    public GameTile North
+    {
+        get
+        {
+            return _north;
+        }
+        set
+        {
+            _north = value;
+        }
+    }
+
+    public GameTile South
+    {
+        get
+        {
+            return _south;
+        }
+        set
+        {
+            _south = value;
+        }
+    }
+
+    public GameTile East
+    {
+        get
+        {
+            return _east;
+        }
+        set
+        {
+            _east = value;
+        }
+    }
+
+    public GameTile West
+    {
+        get
+        {
+            return _west;
+        }
+        set
+        {
+            _west = value;
+        }
+    }
+
+    public Item Item{
+        get
+        {
+            return _item;
+        }
+        set
+        {
+            _item = value;
+        }
+    }
+
+    public bool IsVisited
+    {
+        get
+        {
+            return _isVisited;
+        }
+        set
+        {
+            _isVisited = value;
+        }
+    }
+
+    public bool HasItem()
+    {
+        if (Item != null)
+        {
+            return true;
+        } else
+        {
+            return false;
+        }
+    }
+
+    public void RemoveItem()
+    {
+        Item = null;
+    }
+
+    public string ShowTile()
+    {
+        if (_isVisited)
+        {
+            return Terrain;
+        } else
+        {
+            return "******";
+        }
+    }
+}
