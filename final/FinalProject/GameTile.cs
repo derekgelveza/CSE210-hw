@@ -2,7 +2,7 @@ using System;
 
 public class GameTile
 {
-    private string _terrain;
+    public TerrainType _terrain;
 
     private GameTile _north;
     private GameTile _south;
@@ -113,12 +113,6 @@ public class GameTile
 
     public string ShowTile()
     {
-        if (_isVisited)
-        {
-            return Terrain;
-        } else
-        {
-            return "******";
-        }
+        return IsVisited ? Terrain.ToString() : "*******";
     }
 }

@@ -6,6 +6,9 @@ public class Item
     private string _name;
     private string _description;
 
+    public static Item KING_ARTHUR_SWORD;
+    public static Item AXE;
+
     public Item (string name, string description)
     {
         Name = name;
