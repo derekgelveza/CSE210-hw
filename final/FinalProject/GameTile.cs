@@ -4,16 +4,21 @@ public class GameTile
 {
     public TerrainType _terrain;
 
-    private GameTile _north;
-    private GameTile _south;
-    private GameTile _east;
-    private GameTile _west;
+    private GameTile? _north;
+    private GameTile? _south;
+    private GameTile? _east;
+    private GameTile? _west;
 
-    private Item _item;
-
+    private Item? _item;
     private bool _isVisited;
-
-    public string Terrain {
+    private Obstacle? _obstacle;
+    public GameTile(TerrainType terrain, Item item, Obstacle obstacle)
+    {
+        _terrain = terrain;
+        _item = item;
+        _obstacle = obstacle;
+    }
+    public TerrainType Terrain {
         get
         {
             return _terrain;
@@ -24,7 +29,7 @@ public class GameTile
         }
     }
 
-    public GameTile North
+    public GameTile? North
     {
         get
         {
@@ -36,7 +41,7 @@ public class GameTile
         }
     }
 
-    public GameTile South
+    public GameTile? South
     {
         get
         {
@@ -48,7 +53,7 @@ public class GameTile
         }
     }
 
-    public GameTile East
+    public GameTile? East
     {
         get
         {
@@ -60,7 +65,7 @@ public class GameTile
         }
     }
 
-    public GameTile West
+    public GameTile? West
     {
         get
         {
@@ -72,7 +77,7 @@ public class GameTile
         }
     }
 
-    public Item Item{
+    public Item? Item{
         get
         {
             return _item;
@@ -93,6 +98,23 @@ public class GameTile
         {
             _isVisited = value;
         }
+    }
+
+    public Obstacle? ObstacleType
+    {
+        get
+        {
+            return _obstacle;
+        }
+        set
+        {
+            _obstacle = value;
+        }
+    }
+
+    public bool CanGetItem()
+    {
+        return Item != null && ObstacleType == null;
     }
 
     public bool HasItem()
