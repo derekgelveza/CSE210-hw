@@ -44,6 +44,7 @@ public class GameMap
             "A rageddy old cloak",
             "Despite its age, it should get you through the mountains"
         );
+        Item.CLOAK = cloak;
 
         Item rawMeat = new Item(
             "a great chunk of elk meat",
@@ -62,59 +63,59 @@ public class GameMap
 
         Item water = new Item(
             "clean looking water",
-            "Hm could this go in the bucket?"
+            "this should be useful"
         );
 
         Item blessing = new Item(
-            "King Arthur's blessing!",
+            "King Arthur's blessing! ",
             "This is the power that allows King Arthur to wield his sword"
         );
 
         Obstacle manInCabin = new Obstacle(
-            "Man in Cabin",
+            "man in cabin ",
             "This man will only speak to royalty",
             blessing
         );
 
         Obstacle grizzlyBear = new Obstacle(
-            "hungry looking Grizzly bear",
+            "hungry looking Grizzly bear ",
             "He is blocking the rest of the cave",
             rawMeat
         );
 
         Obstacle manInDesert = new Obstacle(
-            "Thirsty looking man",
+            "thirsty man ",
             "This man clearly needs water",
             water
         );
 
         Obstacle goblinKing = new Obstacle(
-            "The largest goblin you've ever seen",
+            "the largest goblin you've ever seen ",
             "He roars as you approach",
             sword
         );
 
         Obstacle elf = new Obstacle(
-            "An elf is prepping food",
+            "an elf is prepping food ",
             "They tell you the meat ready for cooking, but there's no wood for fire",
             bundleOfWood
         );
 
         Obstacle blisteringWinds = new Obstacle(
-            "There's a blistering wind",
+            "a blistering wind ",
             "It is too cold for you to stay here long",
             cloak
         );
 
         Obstacle missingItem = new Obstacle(
-            "The water here is running",
-            "It looks drinkable, but how will you get some?",
+            "running water ",
+            "It looks drinkable",
             bucket
         );
 
         Obstacle trees = new Obstacle(
-            "These trees are huge!",
-            "cutting some down would be useful",
+            "huge trees ",
+            "Cutting some down would be useful",
             axe
         );
 
@@ -182,9 +183,9 @@ public class GameMap
         for (int col = 0; col < 3; col++) {
             int tile = (row * 3) + col;
             if (_gameTiles[tile] == location){
-                Console.Write("[" + _gameTiles[tile].showTile() + "]");
+                Console.Write("[" + _gameTiles[tile].ShowTile() + "]");
             } else {
-                Console.Write(_gameTiles[tile].showTile());
+                Console.Write(_gameTiles[tile].ShowTile());
             }
 
             if (col < 2){

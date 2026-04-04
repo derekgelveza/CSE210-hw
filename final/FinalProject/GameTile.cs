@@ -4,14 +4,14 @@ public class GameTile
 {
     public TerrainType _terrain;
 
-    private GameTile? _north;
-    private GameTile? _south;
-    private GameTile? _east;
-    private GameTile? _west;
+    private GameTile _north;
+    private GameTile _south;
+    private GameTile _east;
+    private GameTile _west;
 
-    private Item? _item;
+    private Item _item;
     private bool _isVisited;
-    private Obstacle? _obstacle;
+    private Obstacle _obstacle;
     public GameTile(TerrainType terrain, Item item, Obstacle obstacle)
     {
         _terrain = terrain;
@@ -29,7 +29,7 @@ public class GameTile
         }
     }
 
-    public GameTile? North
+    public GameTile North
     {
         get
         {
@@ -41,7 +41,7 @@ public class GameTile
         }
     }
 
-    public GameTile? South
+    public GameTile South
     {
         get
         {
@@ -53,7 +53,7 @@ public class GameTile
         }
     }
 
-    public GameTile? East
+    public GameTile East
     {
         get
         {
@@ -65,7 +65,7 @@ public class GameTile
         }
     }
 
-    public GameTile? West
+    public GameTile West
     {
         get
         {
@@ -77,7 +77,7 @@ public class GameTile
         }
     }
 
-    public Item? Item{
+    public Item Item{
         get
         {
             return _item;
@@ -100,7 +100,7 @@ public class GameTile
         }
     }
 
-    public Obstacle? ObstacleType
+    public Obstacle ObstacleType
     {
         get
         {

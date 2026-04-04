@@ -1,4 +1,4 @@
-public abstract class AbstractAction : IAction
+public abstract class AbstractAction : Action
 {
     protected string _key;
     protected string _description;
@@ -18,7 +18,12 @@ public abstract class AbstractAction : IAction
         return _description;
     }
 
-    public bool ValidKey(string test)
+    public string GetKey()
+    {
+        return _key;
+    }
+
+    public virtual bool ValidKey(string test)
     {
         return _key.Equals(test, StringComparison.OrdinalIgnoreCase);
     }

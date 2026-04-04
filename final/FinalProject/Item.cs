@@ -8,6 +8,7 @@ public class Item
 
     public static Item KING_ARTHUR_SWORD;
     public static Item AXE;
+    public static Item CLOAK;
 
     public Item (string name, string description)
     {

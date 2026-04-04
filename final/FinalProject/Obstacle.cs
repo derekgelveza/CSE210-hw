@@ -41,11 +41,11 @@ public class Obstacle
     {
         get
         {
-            return _requied;
+            return _required;
         }
         set
         {
-            _requied = value;
+            _required = value;
         }
     }
 }
