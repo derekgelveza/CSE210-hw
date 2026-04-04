@@ -1,6 +1,6 @@
-public class InvenotryAction : AbstractAction
+public class InventoryAction : AbstractAction
 {
-    public InvenotryAction() : base("i", "Show Inventory") { }
+    public InventoryAction() : base("i", "Show Inventory") { }
 
     public override bool CanDoAction(Player player)
     {

@@ -42,7 +42,7 @@ public class Game
         {
             new GetItemAction(),
             new UseAction(),
-            new InvenotryAction(),
+            new InventoryAction(),
             new ShowMapAction(),
             new QuitAction(),
             new InvalidAction()
@@ -88,7 +88,7 @@ public class Game
             Console.WriteLine($"You spot an item: {current.Item}");
         }
 
-        if (current.Terrain == TerrainType.GOBLINCAMP &&
+        if (current.Terrain == TerrainType.GoblinCamp &&
             current.ObstacleType == null)
         {
             return GameState.Won;

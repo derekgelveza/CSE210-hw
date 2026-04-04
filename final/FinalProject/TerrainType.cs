@@ -4,29 +4,29 @@ using System.ComponentModel;
 public enum TerrainType
 {
     [Description("The ancient, sun-dappled home of the elves")]
-    GROVE,
+    Grove,
 
     [Description("A modest clearing with smoldering embers and tattered tents")]
-    CAMP,
+    Camp,
 
     [Description("Jagged, snow-capped peaks that pierce the clouds")]
-    MOUNTAIN,
+    Mountain,
 
     [Description("A chaotic sprawl of scrap-wood huts and the smell of rot")]
-    GOBLINCAMP,
+    GoblinCamp,
 
     [Description("A dense thicket of towering oaks and tangled brambles")]
-    FOREST,
+    Forest,
 
     [Description("Weathered planks creaking over the rhythmic lap of the tide")]
-    DOCK,
+    Dock,
 
     [Description("A lonely, dust-covered retreat built from sturdy wood")]
-    CABIN,
+    Cabin,
 
     [Description("A small cave")]
-    CAVE,
+    Cave,
 
     [Description("A very, VERY dry desert")]
-    DESERT
+    Desert
 }

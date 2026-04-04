@@ -6,7 +6,7 @@ public class GameMap
 
     private Item _winningItem;
 
-    public Item getWinningItem()
+    public Item GetWinningItem()
     {
         return _winningItem;
     }
@@ -30,21 +30,21 @@ public class GameMap
             "Rusty Axe", 
             "The axe that has taken you through the Forgotten Realms "
         );
-        Item.AXE = axe;
+        Item.Axe = axe;
         
 
         Item sword = new Item(
             "A brilliant look sword",
             "The sword once wielded by King Arthur, said to be able to destroy the Goblin King"
         );
-        Item.KING_ARTHUR_SWORD = sword;
+        Item.KingArthurSword = sword;
         this._winningItem = sword;
 
         Item cloak = new Item(
             "A rageddy old cloak",
             "Despite its age, it should get you through the mountains"
         );
-        Item.CLOAK = cloak;
+        Item.Cloak = cloak;
 
         Item rawMeat = new Item(
             "a great chunk of elk meat",
@@ -119,17 +119,17 @@ public class GameMap
             axe
         );
 
-        GameTile tile0 = new GameTile(TerrainType.GOBLINCAMP, null, goblinKing);
-        GameTile tile1 = new GameTile(TerrainType.MOUNTAIN, _winningItem, blisteringWinds);
-        GameTile tile2 = new GameTile(TerrainType.CABIN, cloak, manInCabin);
-        
-        GameTile tile3 = new GameTile(TerrainType.DESERT, blessing, manInDesert);
-        GameTile tile4 = new GameTile(TerrainType.GROVE, rawMeat, elf);
-        GameTile tile5 = new GameTile(TerrainType.CAVE, bucket, grizzlyBear);
+        GameTile tile0 = new GameTile(TerrainType.GoblinCamp, null, goblinKing);
+        GameTile tile1 = new GameTile(TerrainType.Mountain, _winningItem, blisteringWinds);
+        GameTile tile2 = new GameTile(TerrainType.Cabin, cloak, manInCabin);
 
-        GameTile tile6 = new GameTile(TerrainType.DOCK, water, missingItem);
-        GameTile tile7 = new GameTile(TerrainType.FOREST, bundleOfWood, trees);
-        GameTile tile8 = new GameTile(TerrainType.CAMP, axe, null);
+        GameTile tile3 = new GameTile(TerrainType.Desert, blessing, manInDesert);
+        GameTile tile4 = new GameTile(TerrainType.Grove, rawMeat, elf);
+        GameTile tile5 = new GameTile(TerrainType.Cave, bucket, grizzlyBear);
+
+        GameTile tile6 = new GameTile(TerrainType.Dock, water, missingItem);
+        GameTile tile7 = new GameTile(TerrainType.Forest, bundleOfWood, trees);
+        GameTile tile8 = new GameTile(TerrainType.Camp, axe, null);
 
         _gameTiles[0] = tile0;
         _gameTiles[1] = tile1;
@@ -176,7 +176,7 @@ public class GameMap
 
     }
 
-    public void showMap(GameTile location) {
+    public void ShowMap(GameTile location) {
     Console.WriteLine();
 
     for (int row = 0; row < 3; row++) {

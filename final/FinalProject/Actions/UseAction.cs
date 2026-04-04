@@ -45,7 +45,7 @@ public class UseAction : AbstractAction
             Console.WriteLine($"You have overcome the {obstacle.Name}!");
             player.Location.ObstacleType = null;
 
-            bool isReusable = selectedItem == Item.AXE || selectedItem == Item.CLOAK;
+            bool isReusable = selectedItem == Item.Axe || selectedItem == Item.Cloak;
             if (!isReusable)
             {
                 player.Inventory.Remove(selectedItem);

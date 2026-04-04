@@ -6,9 +6,9 @@ public class Item
     private string _name;
     private string _description;
 
-    public static Item KING_ARTHUR_SWORD;
-    public static Item AXE;
-    public static Item CLOAK;
+    public static Item KingArthurSword;
+    public static Item Axe;
+    public static Item Cloak;
 
     public Item (string name, string description)
     {

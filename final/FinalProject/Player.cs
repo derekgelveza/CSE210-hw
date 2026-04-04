@@ -89,6 +89,6 @@ public class Player
 
     public void ShowMap()
     {
-        _gameMap.showMap(Location);
+        _gameMap.ShowMap(Location);
     }
 }
